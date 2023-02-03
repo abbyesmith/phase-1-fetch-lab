@@ -7,10 +7,13 @@ function fetchBooks() {
 
 function renderBooks(books) {
   const main = document.querySelector('main');
+  let sum = 0;
   books.forEach(book => {
     const h2 = document.createElement('h2');
     h2.innerHTML = book.name;
     main.appendChild(h2);
+    sum += book.numberOfPages;
+    console.log(sum);
   });
 }
 
